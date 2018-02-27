@@ -50,24 +50,41 @@ $(document).ready(() => {
   });
 
   $('.prev').on('click', function(){
-    $('.slide-image').animate({left: '+=600px'});
-    i-=1;
+    if (i>0){
+      $('.slide-image').animate({left: '+=600px'});
+      i-=1;
+    }else if (i===0){
+      $('.slide-image').animate({left: '-=1200px'});
+    }
+
   });
 
   $('.next').on('click', function(){
-    $('.slide-image').animate({left: '-=600px'});
-    i+=1;
+      if (i<2){
+        $('.slide-image').animate({left: '-=600px'});
+        i+=1;
+      }else if (i===2){
+        i=0;
+        $('.slide-image').animate({left: '+=1200px'});
+      }
+
   });
 
-  //while(i<2){
+
     setInterval(function () {
-      $('.slide-image').animate({left: '-=600px'},1000);
+      if (i<2){
+        console.log('+=', (600*i).toString(), 'px');
+        $('.slide-image').animate({left: '-=600px'});
+        console.log("i = ", i);
+        i+=1;
+      }else{
+        $('.slide-image').animate({left: '+=' + (600*i).toString() + 'px'});
+        i = 0;
+      }
 
-    },2000);
-    //i+=1;
+    },5000);
 
 
-  //}
 
 
 });
