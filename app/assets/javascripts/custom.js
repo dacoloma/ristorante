@@ -2,6 +2,7 @@ $(document).ready(() => {
   const $button1 = $('#1');
   const $button2 = $('#2');
   const $button3 = $('#3');
+  var i=0;
 
   $button1.on('click', () => {
     if ($('.menu').attr("style") === 'display: block;') {
@@ -31,9 +32,6 @@ $(document).ready(() => {
     }else{
       $('.menu').slideToggle();
     }
-
-
-
   });
 
   $button3.on('click', () => {
@@ -50,5 +48,26 @@ $(document).ready(() => {
     }
 
   });
+
+  $('.prev').on('click', function(){
+    $('.slide-image').animate({left: '+=600px'});
+    i-=1;
+  });
+
+  $('.next').on('click', function(){
+    $('.slide-image').animate({left: '-=600px'});
+    i+=1;
+  });
+
+  //while(i<2){
+    setInterval(function () {
+      $('.slide-image').animate({left: '-=600px'},1000);
+
+    },2000);
+    //i+=1;
+
+
+  //}
+
 
 });

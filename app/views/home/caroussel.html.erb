@@ -1,0 +1,23 @@
+<div class="center jumbotron ">
+    <div class="title">
+        Mario&Luigi
+        <p class="subtitle">Pizzaiolo (ex: Plombier)</p>
+    </div>
+    <div class="image-center">
+      <p class="btn  prev"><</p>
+      <div class="image-pizza">
+        <div class="slide-image">
+          <%= image_tag "pizza1.jpg", size: "600x300", class: "image" %>
+          <%= image_tag "pizza2.jpg", size: "600x300", class: "image" %>
+          <%= image_tag "pizza3.jpg", size: "600x300", class: "image" %>
+        </div>
+
+      </div>
+      <p class="btn next">></p>
+    </div>
+    <br>
+    <div class="">
+      <%= link_to 'Entrer', accueil_path, class: 'btn btn-primary', method: :get %>
+    </div>
+
+</div>

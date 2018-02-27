@@ -41,3 +41,63 @@ body {
 .adresse{
   display:none;
 }
+
+.image-center{
+  border: 1px solid red;
+  //max-width: 500px;
+  display: flex;
+
+  justify-content: center;
+}
+
+.image-pizza{
+  //border: 1px solid blue;
+  width: 600px;
+  max-height: 300px;
+  overflow: hidden;
+
+}
+
+.slide-image{
+  border: 1px solid black;
+  width: 1800px;
+  //max-width: 600px;
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+
+}
+
+
+
+.image{
+  //border: 1px solid pink;
+  //display: none;
+}
+/*
+.image-center{
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+
+  .slide-image{
+    border: 2px solid orange;
+    display: flex;
+    justify-content: center;
+    //position:relative;
+    //left: 0px;
+    max-width: 530px;
+    overflow: hidden;
+  }
+
+}
+
+.image-pizza{
+
+  //max-height: 300px;
+  border: 1px solid black;
+  display: flex;
+  max-width: 530px;
+  //text-align: center;
+
+}*/
