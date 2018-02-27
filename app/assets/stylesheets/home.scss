@@ -1,0 +1,43 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+
+body {
+  padding-top: 60px;
+}
+
+.center {
+  //border: 1px solid black;
+  text-align: center;
+}
+
+.tab-bar{
+  //border: 1px solid red;
+  display: flex;
+  justify-content: center;
+}
+
+.content{
+  width: 80%;
+  max-width: 1000px;
+  //border: 1px solid red;
+  text-align: center;
+  //justify-content: center;
+}
+
+.presentation{
+  display:none;
+  &:active{
+    border-bottom: 1px solid red;
+  }
+}
+
+.menu{
+  display:none;
+}
+
+.adresse{
+  display:none;
+}
