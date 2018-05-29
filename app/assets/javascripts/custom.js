@@ -6,8 +6,11 @@ $(document).ready(() => {
 
   $("#indicators li:first-child").addClass("active");
   $("#indicators li").on('click', () =>{
-    var target = i+1;
-    slide(target);
+    i = $(this).index()+2;
+    console.log("i: ",$(this).index());
+    slide(i);
+
+    $('.slide-image').animate({left: '=' + (600*(i+1)).toString() + 'px'});
   });
 
   $button1.on('click', () => {
@@ -15,6 +18,7 @@ $(document).ready(() => {
       $('.menu').slideUp("slow", () =>{
         $('.presentation').slideToggle();
       });
+
     }else if ($('.adresse').attr("style") === 'display: block;'){
       $('.adresse').slideUp("slow", () => {
         $('.presentation').slideToggle();
@@ -107,4 +111,5 @@ $(document).ready(() => {
 function slide(target) {
   $("#indicators li").removeClass("active").eq(target).addClass("active");
   //$('.slide-image').animate({left: '-=' + (600*target).toString() + 'px'});
+
 }
